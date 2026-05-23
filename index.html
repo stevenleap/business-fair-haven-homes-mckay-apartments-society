@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.5" name="viewport"/>
+<title>Fair Haven Homes · McKay Apartments Society</title>
+<meta content="Fair Haven Homes McKay Apartments Society operates a low-income senior housing facility in Vancouver, BC. A quiet, dignified home for seniors." name="description"/>
+<meta content="Fair Haven Homes · McKay Apartments Society" property="og:title"/>
+<meta content="Low-income senior housing in Vancouver, BC. A quiet, dignified home for seniors." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fair Haven Homes · McKay Apartments Society" name="twitter:title"/>
+<meta content="Low-income senior housing in Vancouver, BC. A quiet, dignified home for seniors." name="twitter:description"/>
+<meta content="https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #4A3B32;
+            --secondary: #8B7355;
+            --accent: #C9A96E;
+            --text: #2C2C2C;
+            --background: #F9F6F0;
+            --muted: #EFE9DF;
+            --wood-light: #E5D9C8;
+            --shadow: rgba(74, 59, 50, 0.08);
+            --max-width: 1200px;
+            --font-heading: 'Lora', Georgia, serif;
+            --font-body: 'Nunito', 'Segoe UI', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+        }
+        a { color: var(--primary); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.75; }
+        img { display: block; max-width: 100%; height: auto; }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+
+        
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: transparent;
+            padding: 1rem 0;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .site-header.scrolled {
+            background: rgba(249, 246, 240, 0.96);
+            box-shadow: 0 2px 12px var(--shadow);
+            backdrop-filter: blur(4px);
+        }
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-identity {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            letter-spacing: 0.01em;
+            background: rgba(249, 246, 240, 0.7);
+            padding: 0.2rem 1rem 0.2rem 0.8rem;
+            border-radius: 0 20px 20px 0;
+            margin-left: -0.5rem;
+        }
+        .site-identity span { font-weight: 400; color: var(--secondary); }
+        .header-spacer { height: 72px; }
+
+        
+        .proof-strip {
+            background: var(--muted);
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(74, 59, 50, 0.06);
+            font-size: 0.9rem;
+        }
+        .proof-strip .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.8rem;
+            align-items: center;
+        }
+        .proof-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--secondary);
+        }
+        .proof-item strong { color: var(--primary); font-weight: 600; }
+        .proof-link {
+            background: var(--accent);
+            color: #2c2c2c;
+            padding: 0.15rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: var(--primary);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.pexels.com/photos/11557792/pexels-photo-11557792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center 30% / cover no-repeat;
+            filter: saturate(0.92) brightness(0.75);
+            scale: 1.02;
+            transition: transform 0.1s ease-out;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(74,59,50,0.7) 0%, rgba(74,59,50,0.2) 70%);
+        }
+        .hero-panel {
+            position: relative;
+            z-index: 2;
+            max-width: 580px;
+            background: rgba(249, 246, 240, 0.92);
+            backdrop-filter: blur(3px);
+            padding: 2.8rem 2.8rem 2.8rem 3rem;
+            border-radius: 0 40px 40px 0;
+            box-shadow: 12px 20px 40px rgba(0,0,0,0.2);
+            margin: 2rem 0;
+            width: fit-content;
+        }
+        .hero-panel h1 {
+            font-size: clamp(2.2rem, 6vw, 3.6rem);
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+        .hero-panel p {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 1.8rem;
+            max-width: 480px;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1rem;
+            align-items: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: var(--primary);
+            color: #f5efe6;
+            border: 1px solid var(--primary);
+            transition: background 0.2s, color 0.2s;
+            cursor: default;
+        }
+        .btn:hover { background: var(--secondary); border-color: var(--secondary); color: white; opacity: 1; }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary); color: #f5efe6; }
+
+        
+        section { padding: 5rem 0; }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin-top: 0.5rem;
+        }
+        .text-soft { color: var(--secondary); }
+
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-grid img {
+            border-radius: 20px;
+            box-shadow: 8px 12px 30px rgba(74,59,50,0.12);
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+        @media (max-width: 720px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .about-grid img { height: 260px; }
+        }
+
+        
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .program-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: box-shadow 0.25s, transform 0.2s;
+            border: 1px solid rgba(74,59,50,0.04);
+        }
+        .program-card:hover {
+            box-shadow: 0 12px 32px rgba(74,59,50,0.12);
+            transform: translateY(-3px);
+        }
+        .program-card .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            background: var(--muted);
+            width: 50px; height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 16px;
+            color: var(--primary);
+        }
+        .program-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .program-card p { font-size: 0.95rem; color: var(--secondary); }
+        .card-contact {
+            background: var(--muted);
+            border: 1px dashed var(--secondary);
+        }
+        @media (max-width: 860px) {
+            .program-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 520px) {
+            .program-grid { grid-template-columns: 1fr; }
+        }
+
+        
+        .why-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0 0.5rem;
+        }
+        .why-point {
+            border-left: 4px solid var(--accent);
+            padding-left: 1.2rem;
+        }
+        .why-point .num {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+        .why-point p { font-size: 1rem; color: var(--text); }
+        @media (max-width: 640px) {
+            .why-row { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(74,59,50,0.15);
+        }
+        .gallery-grid .tall { grid-row: span 2; height: 496px; }
+        @media (max-width: 780px) {
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-grid .tall { height: 240px; grid-row: span 1; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+
+        
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(30,24,20,0.9);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            color: #eee;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        .contact-details p { margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .contact-details a { font-weight: 600; }
+        .map-embed {
+            background: var(--wood-light);
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 200px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+        .map-embed iframe {
+            width: 100%;
+            height: 240px;
+            border: 0;
+            display: block;
+        }
+        @media (max-width: 680px) {
+            .contact-wrap { grid-template-columns: 1fr; }
+        }
+
+        
+        .next-steps {
+            background: var(--muted);
+            padding: 2.5rem 2rem;
+            border-radius: 32px;
+            margin: 2rem 0 0;
+        }
+        .next-steps h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .next-steps ol {
+            padding-left: 1.5rem;
+            color: var(--text);
+        }
+        .next-steps li { margin-bottom: 0.6rem; }
+
+        
+        .site-footer {
+            background: #e3d9cb;
+            background-image: repeating-linear-gradient(45deg, rgba(74,59,50,0.02) 0px, rgba(74,59,50,0.02) 4px, transparent 4px, transparent 8px);
+            padding: 2rem 0;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            border-top: 1px solid rgba(74,59,50,0.06);
+        }
+        .site-footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.5rem 1.5rem;
+        }
+        .site-footer a { color: var(--primary); font-weight: 500; }
+
+        
+        .bg-muted { background: var(--muted); }
+        .mt-1 { margin-top: 1rem; }
+        .mb-1 { margin-bottom: 1rem; }
+
+        
+        @media (max-width: 600px) {
+            .hero-panel { padding: 2rem 1.5rem; margin: 1rem; border-radius: 24px; }
+            .hero { min-height: 70vh; }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+<div class="container">
+<div class="site-identity">Fair Haven Homes <span>· McKay Apartments</span></div>
+<div style="width:1.2rem;"></div>
+</div>
+</header>
+<div class="header-spacer"></div>
+<div class="proof-strip">
+<div class="container">
+<span class="proof-item"><strong>📍</strong> Vancouver, BC</span>
+<span class="proof-item"><strong>🏠</strong> Low‑income senior housing</span>
+<a class="proof-link" href="https://www.fairhaven.bc.ca" rel="noopener" target="_blank">📄 Source record</a>
+</div>
+</div>
+<section class="hero" id="home">
+<div class="hero-bg" id="parallaxBg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-panel">
+<h1>A Place to Call Home</h1>
+<p>Fair Haven Homes McKay Apartments Society operates a low‑income senior housing facility in Vancouver, BC.</p>
+<div class="hero-actions">
+<a class="btn" href="#about">Read the summary</a>
+<a class="btn btn-outline" href="https://www.fairhaven.bc.ca" rel="noopener" target="_blank">Check source record</a>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="container">
+<div class="about-grid">
+<div>
+<h2 class="section-title">About Fair Haven</h2>
+<p style="font-size:1.1rem; margin-bottom:1.2rem;">Fair Haven Homes McKay Apartments Society operates a low‑income senior housing facility in Vancouver, BC. Our building provides a quiet, dignified home for seniors, with common areas that encourage community and connection.</p>
+<p class="text-soft">Since opening, we have focused on creating a safe, welcoming environment where residents feel respected and supported. The building is purpose‑built for senior comfort and safety, located in a quiet Vancouver neighbourhood.</p>
+</div>
+<img alt="Residents talking in common room" height="800" loading="lazy" src="https://images.pexels.com/photos/7545214/pexels-photo-7545214.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</section>
+<section class="bg-muted" id="programs">
+<div class="container">
+<h2 class="section-title">Support &amp; housing</h2>
+<div class="program-grid">
+<div class="program-card">
+<div class="card-icon">🏡</div>
+<h3>Affordable Housing</h3>
+<p>Low‑income senior housing in a safe, welcoming environment.</p>
+</div>
+<div class="program-card">
+<div class="card-icon">🪑</div>
+<h3>Community Support</h3>
+<p>On‑site amenities and common areas for social connection.</p>
+</div>
+<div class="program-card">
+<div class="card-icon">🤝</div>
+<h3>Volunteer Opportunities</h3>
+<p>Get involved and support our residents.</p>
+</div>
+<div class="program-card card-contact">
+<div class="card-icon">✉️</div>
+<h3>Contact Us</h3>
+<p>Reach out for inquiries or to learn more.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Why Fair Haven</h2>
+<div class="why-row">
+<div class="why-point">
+<div class="num">01</div>
+<p>Located in a quiet Vancouver neighborhood.</p>
+</div>
+<div class="why-point">
+<div class="num">02</div>
+<p>Purpose‑built for senior comfort and safety.</p>
+</div>
+<div class="why-point">
+<div class="num">03</div>
+<p>A supportive community atmosphere.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-muted" id="gallery">
+<div class="container">
+<h2 class="section-title">Common spaces &amp; neighbourhood</h2>
+<div class="gallery-grid">
+<img alt="Living room with fireplace" height="800" loading="lazy" onclick="openLightbox(this.src)" src="https://images.pexels.com/photos/11125431/pexels-photo-11125431.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Dining room with flowers" height="800" loading="lazy" onclick="openLightbox(this.src)" src="https://images.pexels.com/photos/12196309/pexels-photo-12196309.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Senior in hallway" class="tall" height="800" loading="lazy" onclick="openLightbox(this.src)" src="https://images.pexels.com/photos/33101005/pexels-photo-33101005.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Couple on bench outside" height="800" loading="lazy" onclick="openLightbox(this.src)" src="https://images.pexels.com/photos/7236507/pexels-photo-7236507.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Visit or reach out</h2>
+<div class="contact-wrap">
+<div class="contact-details">
+<p><strong>Fair Haven Homes McKay Apartments Society</strong></p>
+<p>2720 48TH AVE E, VANCOUVER, BC</p>
+<p><a href="tel:+16044332939">(604) 433-2939</a></p>
+<p><a href="mailto:info@fairhaven.bc.ca">info@fairhaven.bc.ca</a></p>
+<div class="next-steps">
+<h3>What happens next</h3>
+<ol>
+<li>Use the contact details above to reach us by phone or email.</li>
+<li>Tell us about your situation or interest — housing, volunteering, or general inquiry.</li>
+<li>We’ll confirm the best next step and answer any questions.</li>
+</ol>
+</div>
+</div>
+<div class="map-embed">
+<iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-123.045%2C49.224%2C-123.025%2C49.234&amp;layer=mapnik&amp;marker=49.229%2C-123.035" title="Map of 2720 48th Ave E, Vancouver"></iframe>
+</div>
+</div>
+</div>
+<form action="mailto:info@fairhaven.bc.ca" enctype="text/plain" method="post"><textarea name="Message" placeholder="Message" rows="4"></textarea><button type="submit">Send email</button></form></section>
+<footer class="site-footer">
+<div class="container">
+<span>© <span id="year"></span> Fair Haven Homes McKay Apartments Society</span>
+<span>Photos: <a href="https://www.pexels.com/photo/illuminated-buildings-at-night-11557792/" rel="noopener" target="_blank">Maximilian Ruther</a>, <a href="https://www.pexels.com/photo/an-elderly-couple-talking-together-7545214/" rel="noopener" target="_blank">SHVETS production</a>, <a href="https://www.pexels.com/photo/senior-woman-reading-book-in-room-5231268/" rel="noopener" target="_blank">Anna Shvets</a>, <a href="https://www.pexels.com/photo/elderly-man-and-a-woman-sitting-on-couch-while-playing-cards-8899976/" rel="noopener" target="_blank">SHVETS</a>, <a href="https://www.pexels.com/photo/an-elderly-man-holding-leafy-vegetables-7551581/" rel="noopener" target="_blank">Kampus</a>, <a href="https://www.pexels.com/photo/man-walking-near-weeping-willow-in-park-17704062/" rel="noopener" target="_blank">Elina Volkova</a>, <a href="https://www.pexels.com/photo/couch-and-armchairs-and-side-table-near-a-fireplace-11125431/" rel="noopener" target="_blank">Curtis Adams</a>, <a href="https://www.pexels.com/photo/a-vase-of-flowers-on-a-wooden-table-12196309/" rel="noopener" target="_blank">Samuel Peter</a>, <a href="https://www.pexels.com/photo/elderly-woman-using-rollator-in-bright-hallway-33101005/" rel="noopener" target="_blank">Wheeleo Walker</a>, <a href="https://www.pexels.com/photo/man-and-woman-sitting-on-a-bench-beside-a-hotel-building-7236507/" rel="noopener" target="_blank">cottonbro</a> · <a href="https://www.fairhaven.bc.ca" rel="noopener" target="_blank">Original site</a></span>
+</div>
+</footer>
+<div class="lightbox" id="lightbox">
+<span class="lightbox-close" onclick="closeLightbox()">×</span>
+<img alt="Organization photo" height="800" id="lightboxImg" src="" width="1200"/>
+</div>
+<script>
+        // dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // header scroll
+        const header = document.getElementById('siteHeader');
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 60) header.classList.add('scrolled');
+                    else header.classList.remove('scrolled');
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // parallax hero bg (gentle)
+        const heroBg = document.getElementById('parallaxBg');
+        window.addEventListener('scroll', () => {
+            const offset = window.scrollY * 0.15;
+            if (offset < 120) heroBg.style.transform = `translateY(${offset}px) scale(1.02)`;
+        });
+
+        // lightbox
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightboxImg').src = src;
+            lb.classList.add('open');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+        }
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+</html>
